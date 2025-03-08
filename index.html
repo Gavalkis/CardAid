@@ -7,21 +7,20 @@
     <title>Лендинг</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
         rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script> -->
     <style>
         /* Montserrat */
         .mt-reg {
@@ -49,19 +48,8 @@
                 "YTLC" 500;
         }
 
-        /* .bg-image {
-            background-image: url('your-image-url.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-        } */
-
-        /* .parallax {
-            background-attachment: fixed;
-        } */
-
         .parallax {
-            background-image: url(/assets/mainPage/credit-card.jpg);
+            background-image: url(./assets/mainPage/credit-card.jpg);
             height: 500px;
             background-attachment: fixed;
             display: flex;
@@ -91,15 +79,11 @@
             content: '';
             position: absolute;
             bottom: 0;
-            /* Позиционирование снизу */
             left: 0;
             right: 0;
             height: 100px;
-            /* Высота виньетки */
             background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-            /* Цвет и прозрачность виньетки */
             pointer-events: none;
-            /* Чтобы не мешать взаимодействию с блоком */
         }
 
         .btn {
@@ -114,6 +98,20 @@
         .btn:active {
             transform: scale(0.98);
             transition: all 300ms;
+        }
+
+        .soc_link {
+            transition: all 300ms;
+        }
+
+        .soc_link:hover {
+            transition: all 300ms;
+            transform: scale(1.2);
+        }
+
+        .soc_link:active {
+            transition: all 300ms;
+            transform: scale(1);
         }
     </style>
 
@@ -136,23 +134,22 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Заявка</a>
+                            <a class="nav-link active" aria-current="page" href="#form">Заявка</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">О нас</a>
+                            <a class="nav-link" href="#aboutUs">О нас</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#">Отзывы</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Предложения
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Дебетовые</a></li>
-                                <li><a class="dropdown-item" href="#">Кредиты</a></li>
-                                <li><a class="dropdown-item" href="#">МФО</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#debitCards">Дебетовые карты</a></li>
+                                <li><a class="dropdown-item" href="#creditCards">Кредитки</a></li>
                             </ul>
                         </li>
                         <li>
@@ -175,24 +172,59 @@
         <!-- Background Image Section -->
         <section>
             <div class="parallax">
-                <h1>
-                    Оформи карту сейчас!
+                <h1 class="text-center">
+                    Максимум преимуществ с каждой картой — выберите свою!
                 </h1>
                 <div class="mask"></div>
             </div>
         </section>
 
         <!-- Work steps -->
+        <div class="d-flex justify-content-center py-5">
+            <h2>Как оформить карту?</h2>
+        </div>
+        <div class="d-flex px-5 flex-wrap justify-content-evenly">
+
+            <div class="card rounded-5 mb-5" style="width: 24rem;">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <h5 class="card-title py-3 px-4 bg-dark text-white rounded-4">1</h5>
+                    </div>
+                    <p class="card-text mb-0 text-center text-wrap">Выберете лучшую карту 💳</p>
+                </div>
+            </div>
+
+            <div class="card rounded-5 mb-5" style="width: 24rem;">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <h5 class="card-title py-3 px-4 bg-dark text-white rounded-4">2</h5>
+                    </div>
+                    <p class="card-text mb-0 text-center text-wrap">Подайте заявку по кнопке <span
+                            class="px-2 py-1 bg-success rounded-pill text-white">Оформить</span> ⏳</p>
+                </div>
+            </div>
+
+            <div class="card rounded-5 mb-5" style="width: 24rem;">
+                <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <h5 class="card-title py-3 px-4 bg-dark text-white rounded-4">3</h5>
+                    </div>
+                    <p class="card-text mb-0 text-center text-wrap">Получите карту курьером бесплатно и начните
+                        пользоваться! 🎉</p>
+                </div>
+            </div>
+
+        </div>
 
         <!-- Cards -->
         <!-- Debit -->
         <div class="d-flex justify-content-center py-5">
-            <h2>Дебетовые карты</h2>
+            <h2 id="debitCards">Дебетовые карты</h2>
         </div>
         <div class="d-flex p-5 flex-wrap justify-content-evenly">
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/debit/akBarsDebet.jpg" class="card-img-top p-4" alt="...">
+                <img src="./assets/debit/akBarsDebet.jpg" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Дебетовая карта с кешбеком</p>
@@ -209,7 +241,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/debit/gazpromDebet.jpg" class="card-img-top p-4" alt="...">
+                <img src="./assets/debit/gazpromDebet.jpg" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Дебетовая карта с кешбеком</p>
@@ -226,7 +258,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/debit/tinkDebet.jpg" class="card-img-top p-4" alt="...">
+                <img src="./assets/debit/tinkDebet.jpg" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Дебетовая карта с кешбеком</p>
@@ -243,7 +275,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/debit/vtbDebet.jpg" class="card-img-top p-4" alt="...">
+                <img src="./assets/debit/vtbDebet.jpg" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Дебетовая карта с кешбеком</p>
@@ -260,7 +292,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/debit/cardPlus.png" class="card-img-top p-4" alt="...">
+                <img src="./assets/debit/cardPlus.png" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Дебетовая карта с кешбеком</p>
@@ -277,7 +309,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/debit/foreDebet.jpg" class="card-img-top p-4" alt="...">
+                <img src="./assets/debit/foreDebet.jpg" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Фора Банк</h5>
                     <p class="card-text mb-0">Дебетовая карта с кешбеком</p>
@@ -294,7 +326,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/debit/mtsDebet.jpg" class="card-img-top p-4" alt="...">
+                <img src="./assets/debit/mtsDebet.jpg" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Дебетовая карта с кешбеком</p>
@@ -311,7 +343,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/debit/sovkDebet.jpg" class="card-img-top p-4" alt="...">
+                <img src="./assets/debit/sovkDebet.jpg" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Дебетовая карта с кешбеком</p>
@@ -328,7 +360,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/debit/otpBank.png" class="card-img-top p-4" alt="...">
+                <img src="./assets/debit/otpBank.png" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Дебетовая карта с кешбеком</p>
@@ -348,12 +380,12 @@
         </div>
         <!-- Credit -->
         <div class="d-flex justify-content-center py-5">
-            <h2>Кредитные карты</h2>
+            <h2 id="creditCards">Кредитные карты</h2>
         </div>
         <div class="d-flex p-5 flex-wrap justify-content-evenly">
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/credit/akbars.png" class="card-img-top p-4" alt="...">
+                <img src="./assets/credit/akbars.png" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Кредитная карта с кешбеком</p>
@@ -370,7 +402,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/credit/sber.png" class="card-img-top p-4" alt="...">
+                <img src="./assets/credit/sber.png" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Кредитная карта с кешбеком</p>
@@ -387,7 +419,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/credit/uralSib.png" class="card-img-top p-4" alt="...">
+                <img src="./assets/credit/uralSib.png" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Кредитная карта с кешбеком</p>
@@ -404,7 +436,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/credit/tinkCredit.jpg" class="card-img-top p-4" alt="...">
+                <img src="./assets/credit/tinkCredit.jpg" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Кредитная карта с кешбеком</p>
@@ -421,7 +453,7 @@
             </div>
 
             <div class="card rounded-5 mb-5" style="width: 24rem;">
-                <img src="/assets/credit/zenit.png" class="card-img-top p-4" alt="...">
+                <img src="./assets/credit/zenit.png" class="card-img-top p-4" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">АК Барс</h5>
                     <p class="card-text mb-0">Кредитная карта с кешбеком</p>
@@ -441,55 +473,61 @@
 
         <!-- Преимущества -->
         <div class="d-flex justify-content-center">
-            <h2>Преимущества</h2>
+            <h2 id="aboutUs">Преимущества</h2>
         </div>
         <div class="px-1 my-3">
             <div class="d-flex justify-content-between mt-4 px-4 flex-wrap flex-sm-wrap flex-md-nowrap ">
-                <div class="card mx-3 my-2 flex-fill" style="width: 20rem;">
-                    <div class="card-header">
-                        Оглавление
-                    </div>
+                <div class="card mx-3 my-2 flex-fill rounded-4 text-white border-0"
+                    style="width: 20rem; background-color: #1F1F1F;">
                     <div class="card-body">
-                        <h5 class="card-title">Заглавие</h5>
-                        <p class="card-text">Описание-убеждение</p>
+                        <h4 class="card-title"><span class="fw-bolder text-decoration-underline">Самые выгодные</span>
+                            предложения от крупнейших банков</h4>
+                        <hr>
+                        <p class="card-text">Мы собрали для вас лучшие дебетовые и кредитные карты от ведущих финансовых
+                            учреждений, чтобы вы могли выбрать наиболее выгодные условия и предложения.</p>
                     </div>
                 </div>
-                <div class="card mx-3 my-2 flex-fill" style="width: 20rem;">
-                    <div class="card-header">
-                        Оглавление
-                    </div>
+                <div class="card mx-3 my-2 flex-fill rounded-4 text-white border-0"
+                    style="width: 20rem; background-color: #1F1F1F;">
                     <div class="card-body">
-                        <h5 class="card-title">Заглавие</h5>
-                        <p class="card-text">Описание-убеждение</p>
+                        <h4 class="card-title"><span class="fw-bolder text-decoration-underline">Максимальный</span>
+                            кешбек и бонусы</h4>
+                        <hr>
+                        <p class="card-text">На нашем сайте представлены карты с лучшими ставками по кешбеку и бонусами,
+                            что позволяет вам получать больше за каждую покупку и экономить на повседневных расходах.
+                        </p>
                     </div>
                 </div>
-                <div class="card mx-3 my-2 flex-fill" style="width: 20rem;">
-                    <div class="card-header">
-                        Оглавление
-                    </div>
+                <div class="card mx-3 my-2 flex-fill rounded-4 text-white border-0"
+                    style="width: 20rem; background-color: #1F1F1F;">
                     <div class="card-body">
-                        <h5 class="card-title">Заглавие</h5>
-                        <p class="card-text">Описание-убеждение</p>
+                        <h4 class="card-title"><span class="fw-bolder text-decoration-underline">Быстрое</span>
+                            получение карт</h4>
+                        <hr>
+                        <p class="card-text">Мы обеспечиваем оперативное оформление и получение карт, чтобы вы могли
+                            начать пользоваться всеми преимуществами уже в кратчайшие сроки.</p>
                     </div>
                 </div>
             </div>
             <div class="d-flex justify-content-between px-4 flex-wrap flex-sm-wrap flex-md-nowrap">
-                <div class="card mx-3 my-2 flex-fill" style="width: 28rem;">
-                    <div class="card-header">
-                        Оглавление
-                    </div>
+                <div class="card mx-3 my-2 flex-fill rounded-4 text-white border-0 "
+                    style="width: 28rem; background-color: #1F1F1F;">
                     <div class="card-body">
-                        <h5 class="card-title">Заглавие</h5>
-                        <p class="card-text">Описание-убеждение</p>
+                        <h4 class="card-title"><span class="fw-bolder text-decoration-underline">Бесплатное</span>
+                            обслуживание и доставка</h4>
+                        <hr>
+                        <p class="card-text">Большинство представленных карт имеют бесплатное обслуживание, а также
+                            бесплатную доставку, что делает процесс получения карты максимально удобным и выгодным.</p>
                     </div>
                 </div>
-                <div class="card mx-3 my-2 flex-fill" style="width: 28rem;">
-                    <div class="card-header">
-                        Оглавление
-                    </div>
+                <div class="card mx-3 my-2 flex-fill rounded-4 text-white border-0"
+                    style="width: 28rem; background-color: #1F1F1F;">
                     <div class="card-body">
-                        <h5 class="card-title">Заглавие</h5>
-                        <p class="card-text">Описание-убеждение</p>
+                        <h4 class="card-title">Только <span
+                                class="fw-bolder text-decoration-underline">актуальные</span> предложения</h4>
+                        <hr>
+                        <p class="card-text">Мы регулярно обновляем информацию о картах и условиях, чтобы вы всегда
+                            имели доступ к самым свежим и выгодным предложениям на рынке.</p>
                     </div>
                 </div>
             </div>
@@ -497,23 +535,34 @@
 
 
         <!-- Форма обратной связи -->
-        <div class="d-flex justify-content-center">
-            <h2>Оставить заявку</h2>
+        <div class="d-flex justify-content-center mt-4">
+            <h2 id="form">Остались вопросы?</h2>
         </div>
-        <div class="d-flex p-5 m-5 justify-content-center flex-column card">
-            <p>Какой то текст</p>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput" class="text-secondary">Email address</label>
+        <form action="https://formspree.io/f/moveayoo" method="POST">
+            <div class="d-flex p-5 m-5 justify-content-center flex-column card">
+                <h5>Заполните форму и мы свяжемся с вами:</h5>
+
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="floatingInput" placeholder="name" type="text" name="name">
+                    <label for="floatingInput" class="text-secondary">Имя<span class="text-danger">*</span></label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="floatingEmail" placeholder="name@example.com" type="email"
+                        name="email">
+                    <label for="floatingEmail" class="text-secondary">Эл. почта<span
+                            class="text-danger">*</span></label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="floatingTG" placeholder="username" type="text" name="Telegram">
+                    <label for="floatingTG" class="text-secondary">Telegram (@username)</label>
+                </div>
+                <div class="d-flex justify-content-center"><button
+                        class="btn rounded-pill bg-black my-4 text-light p-3 w-24" style="width: 12rem;"
+                        type="submit">Отправить</button>
+                </div>
             </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword" class="text-secondary">Password</label>
-            </div>
-            <div class="d-flex justify-content-center"><button
-                    class="btn rounded-pill bg-black my-4 text-light p-3 w-24" style="width: 12rem;">Отправить</button>
-            </div>
-        </div>
+        </form>
+
 
         <!-- Footer -->
         <footer class="mt-reg bg-black text-white py-4" style="height: 50vh;">
@@ -521,8 +570,41 @@
                 <p>&copy; 2025 CardAid. Все права защищены.</p>
             </div>
             <!-- Контакты дубль -->
+            <div class="d-flex justify-content-center">
+                <h5 class="mb-4">Наши контакты:</h5>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a class="mx-4 soc_link" href="https://t.me/CardAid" target="_blank" rel="nofollow"
+                    aria-label="Telegram" title="Telegram" style="width: 30px; height: 30px;"><svg role="presentation"
+                        width=50px height=50px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z"
+                            fill="white" />
+                    </svg>
+                </a>
+                <a class="mx-4 soc_link" href="https://t.me/CardAid" target="_blank" rel="nofollow"
+                    aria-label="Telegram" title="Vkontakte" style="width: 30px; height: 30px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
+                        <path fill="white"
+                            d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37.72,33l-3.73-0.01 c0,0-0.08,0.01-0.21,0.01c-0.3,0-0.92-0.08-1.65-0.58c-1.31-0.91-2.56-3.17-3.55-3.17c-0.07,0-0.13,0.01-0.19,0.03 c-0.86,0.27-1.12,1.13-1.12,2.18c0,0.37-0.26,0.54-0.96,0.54h-1.93c-2.16,0-4.25-0.05-6.6-2.62c-3.46-3.79-6.7-10.53-6.7-10.53 s-0.18-0.39,0.01-0.62c0.18-0.21,0.6-0.23,0.76-0.23c0.04,0,0.06,0,0.06,0h4c0,0,0.37,0.07,0.64,0.27c0.23,0.17,0.35,0.48,0.35,0.48 s0.68,1.32,1.53,2.81c1.43,2.46,2.2,3.28,2.75,3.28c0.09,0,0.18-0.02,0.27-0.07c0.82-0.45,0.58-4.09,0.58-4.09s0.01-1.32-0.42-1.9 c-0.33-0.46-0.96-0.59-1.24-0.63c-0.22-0.03,0.14-0.55,0.62-0.79c0.62-0.3,1.65-0.36,2.89-0.36h0.6c1.17,0.02,1.2,0.14,1.66,0.25 c1.38,0.33,0.91,1.62,0.91,4.71c0,0.99-0.18,2.38,0.53,2.85c0.05,0.03,0.12,0.05,0.21,0.05c0.46,0,1.45-0.59,3.03-3.26 c0.88-1.52,1.56-3.03,1.56-3.03s0.15-0.27,0.38-0.41c0.22-0.13,0.22-0.13,0.51-0.13h0.03c0.32,0,3.5-0.03,4.2-0.03h0.08 c0.67,0,1.28,0.01,1.39,0.42c0.16,0.62-0.49,1.73-2.2,4.03c-2.82,3.77-3.14,3.49-0.8,5.67c2.24,2.08,2.7,3.09,2.78,3.22 C39.68,32.88,37.72,33,37.72,33z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <p class="mx-3 my-5">
+                <a class="text-muted text-decoration-none fw-light" style="font-size: 12px;"
+                    href="https://ru.freepik.com/free-photo/credit-cards-that-are-stacked-floor_5469610.htm#fromView=image_search_similar&page=1&position=47&uuid=7cbe4cce-11ec-474f-8d33-60bdfe6d09e6&query=%D0%B4%D0%B5%D0%B1%D0%B5%D1%82%D0%BE%D0%B2%D1%8B%D0%B5+%D0%BA%D0%B0%D1%80%D1%82%D1%8B">Изображение
+                    от jcomp на Freepik</a>
+            </p>
         </footer>
 
 </body>
+<script defer>
+    window.onbeforeunload = () => {
+        for (const form of document.getElementsByTagName('form')) {
+            form.reset();
+        }
+    }
+</script>
 
 </html>
